@@ -22,7 +22,6 @@ public class PacStudentMovement : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         transform.position = points[0];
         audioSource.loop = true;
-        audioSource.Play();
     }
 
     // Update is called once per frame
@@ -41,7 +40,6 @@ public class PacStudentMovement : MonoBehaviour
             if (direction.y > 0) animator.Play("PacStudent_up");
             else animator.Play("PacStudent_down");
         }
-        
         if (Vector2.Distance(transform.position, targetPoint) < 0.05f)
         {
             target = (target + 1) % 4;
