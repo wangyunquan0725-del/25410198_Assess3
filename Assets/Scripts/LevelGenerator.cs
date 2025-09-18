@@ -106,8 +106,10 @@ public class LevelGenerator : MonoBehaviour
             //wall
             case 2:
             case 4:
-            case 8:
                 if (!up || !down ) return Quaternion.Euler(0, 0, 90);
+                break;
+            case 8:
+                if (!left || !right ) return Quaternion.Euler(0, 0, 90);
                 break;
             //T junction
             case 7:
